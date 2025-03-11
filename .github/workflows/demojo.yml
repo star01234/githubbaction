@@ -2,11 +2,8 @@ name: GitHub Actions Demo
 
 on:
   push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+    tags:
+      - '*'
 
 env:
   MY_HOST: '127.0.0.1'
@@ -16,7 +13,7 @@ jobs:
     build-job:
       runs-on: ubuntu-latest
       env:
-        FULLNAME: 'Mary Doe'
+        FULLNAME: 'burit srisawan'
       steps:
         - run: echo ${{ vars.COMPANY_NAME }}
         - run: echo ${{ env.COMPANY_NAME }}
